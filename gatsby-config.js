@@ -1,11 +1,42 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    firstName: `Behnam`,
+    lastName: `Nikkhah`,
+    description: `Front-End Developer`,
+    author: `Behnam Nikkhah`,
+    telephone: '4037149747',
+    social: [
+      {
+        title: 'GitHub',
+        icon: 'faGithub',
+        link: 'https://github.com/bnikkhah'
+      },
+      {
+        title: 'LinkedIn',
+        icon: 'faLinkedinIn',
+        link: 'https://www.linkedin.com/in/bnikkhah/'
+      },
+      {
+        title: 'CodePen',
+        icon: 'faCodepen',
+        link: 'https://codepen.io/NeroSonic'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,0 +1,156 @@
+$primary: #9b4dca;
+$white: #ffffff;
+
+body {
+  margin-top: 6rem;
+
+  @media (max-width: 40.0rem) {
+    margin-bottom: 73px;
+  }
+}
+
+.pt-3 {
+  padding-top: 1rem;
+}
+
+.pb-3 {
+  padding-bottom: 1rem;
+}
+
+.last-name {
+  text-transform: uppercase;
+  color: $primary;
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+#tsparticles {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 1.25rem;
+}
+
+.item-wrapper {
+
+  .img-wrapper {
+    filter: grayscale(1);
+    transition: filter .6s ease;
+
+    @media (min-width: 80.0rem) {
+      transform: translateY(3rem);
+      transition: transform .3s ease;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    
+    .img-wrapper {
+      filter: grayscale(0);
+      transform: translateY(0);
+    }
+    
+    .button {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .button {
+    
+    @media (min-width: 80.0rem) {
+      opacity: 0;
+      transform: translateY(-3rem);
+      transition: transform .3s ease;
+    }
+  }
+}
+
+.slick-arrow {
+  z-index: 1;
+
+  &.slick-next {
+    right: 25px;
+
+    @media (min-width: 80.0rem) {
+      right: -50px;
+    }
+  }
+
+  &.slick-prev {
+    left: 25px;
+
+    @media (min-width: 80.0rem) {
+      left: -50px;
+    }
+  }
+
+  &:before {
+    color: $white;
+
+    @media (min-width: 80.0rem) {
+      color: $primary;
+    }
+  }
+}
+
+.text-white {
+  color: $white;
+}
+
+// StickyFooter
+
+.stickyfooter {
+  background-color: $primary;
+  overflow-x: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  @media (min-width: 40.0rem) {
+    display: none;
+  }
+}
