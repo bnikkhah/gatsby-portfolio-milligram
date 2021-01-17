@@ -150,6 +150,11 @@ body {
   width: 100%;
   z-index: 999;
 
+  .fa-phone {
+    font-size: 24px;
+    color: $white;
+  }
+
   @media (min-width: 40.0rem) {
     display: none;
   }

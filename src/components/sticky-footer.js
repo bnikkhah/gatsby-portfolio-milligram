@@ -22,7 +22,7 @@ const StickyFooter = () => {
             <div className="stickyfooter pt-3 pb-3">
                 <div className="row text-center">
                     <div className="column">
-                        <FontAwesomeIcon icon={faPhone} style={{ color: '#ffffff', fontSize: '24px' }} />
+                        <FontAwesomeIcon icon={faPhone} />
                         <p className="mb-0 text-white">Call me</p>
                     </div>
                 </div>
