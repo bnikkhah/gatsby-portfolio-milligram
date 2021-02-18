@@ -9,6 +9,19 @@ body {
   }
 }
 
+.list-unstyled {
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    margin-bottom: 0;
+  }
+}
+
+// .float-right {
+//   float: right;
+// }
+
 .pt-3 {
   padding-top: 1rem;
 }
@@ -34,6 +47,10 @@ body {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .mb-0 {
@@ -158,4 +175,9 @@ body {
   @media (min-width: 40.0rem) {
     display: none;
   }
+}
+
+header {
+  z-index: 999;
+  position: relative;
 }

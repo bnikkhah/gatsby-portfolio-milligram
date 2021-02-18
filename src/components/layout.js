@@ -11,13 +11,15 @@ import PropTypes from "prop-types"
 import Footer from './footer'
 import "./layout.scss"
 
+import Header from './header'
+
 import Particles from 'react-particles-js'
 
 const Layout = ({ children }) => {
 
   return (
     <main>
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}      
+      <Header/>      
       <Particles
         params={{
           "particles": {
