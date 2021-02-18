@@ -49,6 +49,7 @@ const Contact = () => {
                             <Recaptcha
                                 sitekey={process.env.CAPTCHA_KEY}
                                 verifyCallback={verifyCallback}
+                                render="explicit"
                             />
                             <button type="submit" className="mt-4">Send</button>
                         </form>

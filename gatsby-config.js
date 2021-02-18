@@ -30,14 +30,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-recaptcha`,
-      options: {
-         async: true,
-         defer: false,
-         args: `?onload=onloadCallback&render=explicit`,
-      },
-    },
+    `gatsby-plugin-recaptcha`,
     {
       resolve: "gatsby-source-contentful",
       options: {
