@@ -13,12 +13,6 @@ const Contact = () => {
         }
     }
 
-    const handleSubmit = (e) => {
-        if (!captcha) {
-            e.preventDefault();
-        }
-    }
-
     return (
         <Layout>
             <div className="container">
@@ -26,15 +20,15 @@ const Contact = () => {
                     <div className="column">
                         <h2>Contact Me</h2>
                         <form
-                            action={`https://getform.io/f/${process.env.GETFORM_KEY}`}
+                            action={`https://getform.io/f/${process.env.GATSBY_GETFORM_KEY}`}
                             method="POST"
-                            onSubmit={handleSubmit}
                         >
                             <input
                                 type="text"
                                 name="name"
                                 placeholder="Name..."
                                 required
+                                autoFocus
                             />
                             <input
                                 type="email"
@@ -47,11 +41,11 @@ const Contact = () => {
                                 placeholder="Message..."
                             />
                             <Recaptcha
-                                sitekey={process.env.CAPTCHA_KEY}
+                                sitekey={process.env.GATSBY_CAPTCHA_KEY}
                                 verifyCallback={verifyCallback}
                                 render="explicit"
                             />
-                            <button type="submit" className="mt-4">Send</button>
+                            <button type="submit" className="mt-4" disabled={captcha ? false : true}>Send</button>
                         </form>
                     </div>
                 </div>
